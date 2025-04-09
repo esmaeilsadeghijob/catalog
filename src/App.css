@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Shekasteh';
+  src: url("/src/contexts/font/Shekasteh.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'IranNastaliq';
+  src: url("/src/contexts/font/IranNastaliq.ttf") format('truetype');
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* مرکز عمودی */
+  left: 50%; /* مرکز افقی */
+  transform: translate(-50%, -50%);
+  font-family: 'IranNastaliq', sans-serif;
+}
+
+.pipe {
+  font-size: 2em; /* اندازه خط پایپ */
+  color: white;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 2.5em; /* اندازه متن */
+  color: white;
+  white-space: nowrap;
+}
+
+.text a {
+  color: white; /* رنگ لینک به سفید تنظیم شده */
+  text-decoration: none; /* حذف خط زیر لینک */
+}
+
+.text a:hover {
+  color: white; /* رنگ سفید حتی در حالت هاور */
+  text-decoration: none; /* خط زیر در هاور نیز حذف شود */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
