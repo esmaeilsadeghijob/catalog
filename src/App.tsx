@@ -6,7 +6,8 @@ const App: React.FC = () => {
     const text = "د کتر اسماعیل صادقی هفشجانی";
     const [displayedText, setDisplayedText] = useState<string>("");
     const [showPipe, setShowPipe] = useState<boolean>(true);
-    const [showSocialLinks, setShowSocialLinks] = useState<boolean>(false);
+    const [showInstagram, setShowInstagram] = useState<boolean>(false);
+    const [showLinkedin, setShowLinkedin] = useState<boolean>(false);
 
     useEffect(() => {
         let index = 0;
@@ -17,7 +18,8 @@ const App: React.FC = () => {
             } else {
                 clearInterval(interval);
                 setShowPipe(false);
-                setTimeout(() => setShowSocialLinks(true), 1000); // فاصله زمانی برای نمایش لینک‌ها
+                setTimeout(() => setShowInstagram(true), 1000); // نمایش اینستاگرام
+                setTimeout(() => setShowLinkedin(true), 1500);  // نمایش لینکدین با تأخیر بیشتر
             }
         }, 120);
         return () => clearInterval(interval);
@@ -37,35 +39,33 @@ const App: React.FC = () => {
                     </span>
                 </div>
 
-                {/* افزودن فاصله بین نام و شبکه‌های اجتماعی */}
-                {showSocialLinks && (
-                    <div className="spacer"></div>
-                )}
+                {/* افزودن فاصله بین متن و لینک‌ها */}
+                <div className="spacer"></div>
 
-                {showSocialLinks && (
-                    <div className="social-links">
-                        <div className="instagram-container">
-                            <InstagramOutlined className="instagram-icon" />
-                            <a
-                                href="https://www.instagram.com/dr.esmail.sadeghi.h/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-link"
-                            >
-                                dr.esmail.sadeghi.h
-                            </a>
-                        </div>
-                        <div className="linkedin-container">
-                            <LinkedinOutlined className="linkedin-icon" />
-                            <a
-                                href="https://www.linkedin.com/in/dr-esmaeil-sadeghi-hafshejani/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-link"
-                            >
-                                dr-esmaeil-sadeghi-hafshejani
-                            </a>
-                        </div>
+                {showInstagram && (
+                    <div className="instagram-container">
+                        <InstagramOutlined className="instagram-icon" />
+                        <a
+                            href="https://www.instagram.com/dr.esmail.sadeghi.h/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                        >
+                            dr.esmail.sadeghi.h
+                        </a>
+                    </div>
+                )}
+                {showLinkedin && (
+                    <div className="linkedin-container">
+                        <LinkedinOutlined className="linkedin-icon" />
+                        <a
+                            href="https://www.linkedin.com/in/dr-esmaeil-sadeghi-hafshejani/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                        >
+                            dr-esmaeil-sadeghi-hafshejani
+                        </a>
                     </div>
                 )}
             </header>

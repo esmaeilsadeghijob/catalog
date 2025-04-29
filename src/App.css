@@ -55,13 +55,13 @@
 
 .instagram-icon {
   color: #E4405F; /* رنگ قرمز اینستاگرام */
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 10px;
 }
 
 .linkedin-icon {
   color: #0077b5; /* رنگ آبی لینکدین */
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 10px;
 }
 
@@ -77,8 +77,17 @@
 }
 
 .spacer {
-  height: 120px; /* افزایش بیشتر فاصله */
+  height: 100px; /* ایجاد فاصله بین نام و لینک‌ها */
 }
+
+/* نمایش لینک‌ها در دو سطر جداگانه */
+.instagram-container,
+.linkedin-container {
+  display: block; /* نمایش هر لینک به صورت یک بلوک جداگانه */
+  text-align: center;
+  margin-top: 10px;
+}
+
 
 @keyframes slideInFromLeft {
   from {
