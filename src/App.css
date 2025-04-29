@@ -13,32 +13,74 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%; /* مرکز عمودی */
-  left: 50%; /* مرکز افقی */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'IranNastaliq', sans-serif;
 }
 
 .pipe {
-  font-size: 2em; /* اندازه خط پایپ */
+  font-size: 2em;
   color: white;
   margin-right: 10px;
 }
 
 .text {
-  font-size: 3em; /* اندازه متن */
+  font-size: 3em;
   color: white;
   white-space: nowrap;
 }
 
 .text a {
-  color: white; /* رنگ لینک به سفید تنظیم شده */
-  text-decoration: none; /* حذف خط زیر لینک */
+  color: white;
+  text-decoration: none;
 }
 
 .text a:hover {
-  color: white; /* رنگ سفید حتی در حالت هاور */
-  text-decoration: none; /* خط زیر در هاور نیز حذف شود */
+  color: white;
+  text-decoration: none;
+}
+
+.instagram-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 100px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.instagram-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.instagram-link {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  font-family: "Ink Free", serif;
+}
+
+.instagram-link:hover {
+  color: #ccc;
+}
+
+.instagram-container .anticon {
+  color: #E4405F; /* قرمز کم‌رنگ مشابه لوگوی اینستاگرام */
+  font-size: 20px;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .App-header {
