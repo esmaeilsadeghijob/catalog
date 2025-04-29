@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { InstagramOutlined } from '@ant-design/icons';
+import { InstagramOutlined, LinkedinOutlined } from '@ant-design/icons';
 
 const App: React.FC = () => {
     const text = "د کتر اسماعیل صادقی هفشجانی";
     const [displayedText, setDisplayedText] = useState<string>("");
     const [showPipe, setShowPipe] = useState<boolean>(true);
-    const [showInstagram, setShowInstagram] = useState<boolean>(false);
+    const [showSocialLinks, setShowSocialLinks] = useState<boolean>(false);
 
     useEffect(() => {
         let index = 0;
@@ -17,7 +17,7 @@ const App: React.FC = () => {
             } else {
                 clearInterval(interval);
                 setShowPipe(false);
-                setTimeout(() => setShowInstagram(true), 500);
+                setTimeout(() => setShowSocialLinks(true), 500);
             }
         }, 120);
         return () => clearInterval(interval);
@@ -36,17 +36,30 @@ const App: React.FC = () => {
                         </a>
                     </span>
                 </div>
-                {showInstagram && (
-                    <div className="instagram-container">
-                        <InstagramOutlined />
-                        <a
-                            href="https://www.instagram.com/dr.esmail.sadeghi.h/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="instagram-link"
-                        >
-                            dr.esmail.sadeghi.h
-                        </a>
+                {showSocialLinks && (
+                    <div className="social-container">
+                        <div className="social-item">
+                            <InstagramOutlined className="instagram-icon" />
+                            <a
+                                href="https://www.instagram.com/dr.esmail.sadeghi.h/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link"
+                            >
+                                dr.esmail.sadeghi.h
+                            </a>
+                        </div>
+                        <div className="social-item">
+                            <LinkedinOutlined className="linkedin-icon" />
+                            <a
+                                href="https://www.linkedin.com/in/dr-esmaeil-sadeghi-hafshejani/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link"
+                            >
+                                dr-esmaeil-sadeghi-hafshejani
+                            </a>
+                        </div>
                     </div>
                 )}
             </header>

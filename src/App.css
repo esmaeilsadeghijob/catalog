@@ -25,10 +25,17 @@
   margin-right: 10px;
 }
 
+/*.text {*/
+/*  font-size: 3em;*/
+/*  color: white;*/
+/*  white-space: nowrap;*/
+/*}*/
+
 .text {
-  font-size: 3em; /* اندازه متن برای دسکتاپ */
+  font-size: 3em; /* اندازه متن */
   color: white;
   white-space: nowrap;
+  margin-bottom: 40px; /* فاصله از لینک‌های شبکه‌های اجتماعی */
 }
 
 .text a {
@@ -41,8 +48,10 @@
   text-decoration: none;
 }
 
-.instagram-container {
+/* تنظیمات آیکون و لینک‌های اجتماعی */
+.social-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -50,26 +59,33 @@
   animation: slideInFromLeft 1s ease-out;
 }
 
-.instagram-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.instagram-link {
+.social-item .social-link {
   font-size: 1em;
   color: white;
   text-decoration: none;
   font-family: "Ink Free", serif;
+  margin-left: 10px;
 }
 
-.instagram-link:hover {
+.social-item .social-link:hover {
   color: #ccc;
 }
 
-.instagram-container .anticon {
-  color: #E4405F;
-  font-size: 20px;
+.instagram-icon {
+  color: #E4405F; /* رنگ قرمز کم‌رنگ مشابه لوگوی اینستاگرام */
+  font-size: 24px;
+}
+
+.linkedin-icon {
+  color: #0077b5; /* رنگ آبی لینکدین */
+  font-size: 24px;
 }
 
 @keyframes slideInFromLeft {
@@ -99,24 +115,25 @@
     text-align: center;
   }
 
-  .instagram-container {
+  .social-container {
     flex-direction: column; /* نمایش عمودی در موبایل */
     margin-top: 50px; /* کاهش فاصله */
   }
 
-  .instagram-logo {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px; /* تنظیم فاصله */
+  .social-item {
+    flex-direction: row; /* چیدمان افقی در موبایل */
   }
 
-  .instagram-link {
+  .social-link {
     font-size: 0.9em; /* کوچک‌تر شدن فونت لینک */
-    text-align: center;
   }
 
   .container {
     width: 90%;
     flex-direction: column; /* چیدمان عمودی */
+  }
+
+  .instagram-icon, .linkedin-icon {
+    font-size: 20px; /* کوچک‌تر شدن آیکون‌ها */
   }
 }
