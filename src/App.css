@@ -25,17 +25,11 @@
   margin-right: 10px;
 }
 
-/*.text {*/
-/*  font-size: 3em;*/
-/*  color: white;*/
-/*  white-space: nowrap;*/
-/*}*/
-
 .text {
-  font-size: 3em; /* اندازه متن */
+  font-size: 3em;
   color: white;
   white-space: nowrap;
-  margin-bottom: 40px; /* فاصله از لینک‌های شبکه‌های اجتماعی */
+  margin-bottom: 40px;
 }
 
 .text a {
@@ -48,44 +42,42 @@
   text-decoration: none;
 }
 
-/* تنظیمات آیکون و لینک‌های اجتماعی */
-.social-container {
+/* تنظیمات شبکه‌های اجتماعی */
+.instagram-container,
+.linkedin-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 20px; /* فاصله بین لینک‌ها */
   animation: slideInFromLeft 1s ease-out;
 }
 
-.social-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.social-item .social-link {
-  font-size: 1em;
-  color: white;
-  text-decoration: none;
-  font-family: "Ink Free", serif;
-  margin-left: 10px;
-}
-
-.social-item .social-link:hover {
-  color: #ccc;
-}
-
 .instagram-icon {
-  color: #E4405F; /* رنگ قرمز کم‌رنگ مشابه لوگوی اینستاگرام */
+  color: #E4405F; /* رنگ قرمز اینستاگرام */
   font-size: 24px;
+  margin-right: 10px;
 }
 
 .linkedin-icon {
   color: #0077b5; /* رنگ آبی لینکدین */
   font-size: 24px;
+  margin-right: 10px;
+}
+
+.social-link {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  font-family: "Ink Free", serif;
+}
+
+.social-link:hover {
+  color: #ccc;
+}
+
+.spacer {
+  height: 120px; /* افزایش بیشتر فاصله */
 }
 
 @keyframes slideInFromLeft {
@@ -111,29 +103,26 @@
 /* ==== Media Queries برای نمایشگرهای موبایل ==== */
 @media (max-width: 768px) {
   .text {
-    font-size: 2em; /* کاهش اندازه متن برای موبایل */
+    font-size: 2em;
     text-align: center;
   }
 
-  .social-container {
-    flex-direction: column; /* نمایش عمودی در موبایل */
-    margin-top: 50px; /* کاهش فاصله */
-  }
-
-  .social-item {
-    flex-direction: row; /* چیدمان افقی در موبایل */
+  .instagram-container,
+  .linkedin-container {
+    flex-direction: row; /* لینک‌ها افقی می‌مانند */
+    margin-top: 10px;
   }
 
   .social-link {
-    font-size: 0.9em; /* کوچک‌تر شدن فونت لینک */
+    font-size: 0.9em;
   }
 
   .container {
     width: 90%;
-    flex-direction: column; /* چیدمان عمودی */
+    flex-direction: column;
   }
 
   .instagram-icon, .linkedin-icon {
-    font-size: 20px; /* کوچک‌تر شدن آیکون‌ها */
+    font-size: 20px;
   }
 }
