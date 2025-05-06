@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Allow: /sitemap.xml
+Sitemap: https://esmailsadeghi.ir/sitemap.xml
