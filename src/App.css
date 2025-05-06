@@ -29,7 +29,7 @@
   font-size: 3em;
   color: white;
   white-space: nowrap;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .text a {
@@ -44,24 +44,31 @@
 
 /* تنظیمات شبکه‌های اجتماعی */
 .instagram-container,
-.linkedin-container {
+.linkedin-container,
+.website-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 20px; /* فاصله بین لینک‌ها */
+  margin-top: 20px;
   animation: slideInFromLeft 1s ease-out;
 }
 
 .instagram-icon {
-  color: #E4405F; /* رنگ قرمز اینستاگرام */
-  font-size: 20px;
+  color: #E4405F;
+  font-size: 15px;
   margin-right: 10px;
 }
 
 .linkedin-icon {
-  color: #0077b5; /* رنگ آبی لینکدین */
-  font-size: 20px;
+  color: #0077b5;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.website-icon {
+  color: #f2eeee;
+  font-size: 15px;
   margin-right: 10px;
 }
 
@@ -77,17 +84,17 @@
 }
 
 .spacer {
-  height: 100px; /* ایجاد فاصله بین نام و لینک‌ها */
+  height: 100px;
 }
 
-/* نمایش لینک‌ها در دو سطر جداگانه */
+/* نمایش لینک‌ها در بلوک‌های جداگانه */
 .instagram-container,
-.linkedin-container {
-  display: block; /* نمایش هر لینک به صورت یک بلوک جداگانه */
+.linkedin-container,
+.website-container {
+  display: block;
   text-align: center;
   margin-top: 10px;
 }
-
 
 @keyframes slideInFromLeft {
   from {
@@ -109,7 +116,7 @@
   justify-content: center;
 }
 
-/* ==== Media Queries برای نمایشگرهای موبایل ==== */
+/* Media Queries برای نمایشگرهای موبایل */
 @media (max-width: 768px) {
   .text {
     font-size: 2em;
@@ -117,8 +124,9 @@
   }
 
   .instagram-container,
-  .linkedin-container {
-    flex-direction: row; /* لینک‌ها افقی می‌مانند */
+  .linkedin-container,
+  .website-container {
+    flex-direction: row;
     margin-top: 10px;
   }
 
@@ -131,7 +139,7 @@
     flex-direction: column;
   }
 
-  .instagram-icon, .linkedin-icon {
+  .instagram-icon, .linkedin-icon, .website-icon {
     font-size: 15px;
   }
 }
