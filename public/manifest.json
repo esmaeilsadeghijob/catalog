@@ -1,6 +1,7 @@
 {
   "short_name": "Dr.Sadeghi",
   "name": "Dr Esmail Sadeghi",
+  "description": "وب‌سایت رسمی دکتر اسماعیل صادقی - متخصص نرم‌افزار، هوش مصنوعی و کوچینگ برنامه‌نویسی.",
   "icons": [
     {
       "src": "/favicon/apple-touch-icon.png",
@@ -33,7 +34,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
