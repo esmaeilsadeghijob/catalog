@@ -20,16 +20,16 @@
 }
 
 .pipe {
-  font-size: 2em;
+  font-size: 1em;
   color: white;
-  margin-right: 10px;
+  margin-right: 1px;
 }
 
 .text {
   font-size: 3em;
   color: white;
   white-space: nowrap;
-  margin-bottom: 80px;
+  margin-bottom: 180px;
 }
 
 .text a {
@@ -45,6 +45,7 @@
 /* تنظیمات شبکه‌های اجتماعی */
 .instagram-container,
 .linkedin-container,
+.whatsapp-container,
 .website-container {
   display: flex;
   align-items: center;
@@ -52,6 +53,7 @@
   position: relative;
   margin-top: 20px;
   animation: slideInFromLeft 1s ease-out;
+  min-height: 30px;
 }
 
 .instagram-icon {
@@ -68,6 +70,12 @@
 
 .website-icon {
   color: #f2eeee;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.whatsapp-icon {
+  color: #00e770;
   font-size: 15px;
   margin-right: 10px;
 }
@@ -90,6 +98,7 @@
 /* نمایش لینک‌ها در بلوک‌های جداگانه */
 .instagram-container,
 .linkedin-container,
+.whatsapp-container,
 .website-container {
   display: block;
   text-align: center;
@@ -125,6 +134,7 @@
 
   .instagram-container,
   .linkedin-container,
+  .whatsapp-container,
   .website-container {
     flex-direction: row;
     margin-top: 10px;
