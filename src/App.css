@@ -46,6 +46,7 @@
 .instagram-container,
 .linkedin-container,
 .whatsapp-container,
+.skype-container,
 .website-container {
   display: flex;
   align-items: center;
@@ -76,6 +77,12 @@
 
 .whatsapp-icon {
   color: #00e770;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.skype-icon {
+  color: #3bace3;
   font-size: 15px;
   margin-right: 10px;
 }
@@ -135,6 +142,7 @@
   .instagram-container,
   .linkedin-container,
   .whatsapp-container,
+  .skype-container,
   .website-container {
     flex-direction: row;
     margin-top: 10px;

@@ -3,13 +3,14 @@ import './App.css';
 import {GlobalOutlined, InstagramOutlined, LinkedinOutlined, WhatsAppOutlined} from '@ant-design/icons';
 
 const App: React.FC = () => {
-    const text = "د کتر اسماعیل صادقی هفشجانی";
+    const text = "د کتر اسماعیل صادقی ";
     const [displayedText, setDisplayedText] = useState<string>("");
     const [showPipe, setShowPipe] = useState<boolean>(true);
     const [showInstagram, setShowInstagram] = useState<boolean>(false);
     const [showLinkedin, setShowLinkedin] = useState<boolean>(false);
     const [showWebsite, setShowWebsite] = useState<boolean>(false);
     const [showWhatsapp, setShowWhatsapp] = useState<boolean>(false);
+    const [showSkype, setShowSkype] = useState<boolean>(false);
 
     useEffect(() => {
         let index = 0;
@@ -24,6 +25,7 @@ const App: React.FC = () => {
                 setTimeout(() => setShowLinkedin(true), 1500);
                 setTimeout(() => setShowWebsite(true), 2000); // نمایش وب‌سایت بعد از لینکدین
                 setTimeout(() => setShowWhatsapp(true), 2500); // نمایش وب‌سایت بعد از لینکدین
+                setTimeout(() => setShowSkype(true), 3000); // نمایش وب‌سایت بعد از لینکدین
             }
         }, 120);
         return () => clearInterval(interval);
@@ -89,6 +91,17 @@ const App: React.FC = () => {
                         </a>
                     </div>
                 )}
+                {/*{showSkype && (*/}
+                {/*    <div className="skype-container">*/}
+                {/*        <WhatsAppOutlined className="skype-icon"/>*/}
+                {/*        <a href="https://join.skype.com/invite/XXXXXXXXXXX"*/}
+                {/*           target="_blank"*/}
+                {/*           rel="noopener noreferrer"*/}
+                {/*           className="social-link">*/}
+                {/*            Skype*/}
+                {/*        </a>*/}
+                {/*    </div>*/}
+                {/*)}*/}
             </header>
         </div>
     );
