@@ -3,7 +3,7 @@ import './App.css';
 import {GlobalOutlined, InstagramOutlined, LinkedinOutlined, WhatsAppOutlined} from '@ant-design/icons';
 
 const App: React.FC = () => {
-    const text = "د کتر اسماعیل صادقی ";
+    const text = "د کتر اسماعیل صادقی هفشجانی";
     const [displayedText, setDisplayedText] = useState<string>("");
     const [showPipe, setShowPipe] = useState<boolean>(true);
     const [showInstagram, setShowInstagram] = useState<boolean>(false);
